@@ -1,7 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* STILI DELLE PAGINE */
+.content {
+  margin-left: 150px; 
   padding: 2rem;
-  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+
+iframe {
+  width: 560px;
+  height: 315px;
+  border: 0;
+}
+
 

@@ -25,8 +25,10 @@ body {
 	background-color: var(--background-color);
 	background-image: url("./assets/mandala-background.jpg");
 	background-size: cover;
-	background-position: center;
 	background-repeat: no-repeat;
+	background-position: left;
+	background-attachment: fixed;
+	
 }
 
 #root {

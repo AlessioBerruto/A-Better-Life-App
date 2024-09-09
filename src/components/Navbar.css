@@ -72,4 +72,17 @@
 	padding-bottom: 1px;
 	border-radius: 10%;
 	background-color: #f2e4e8;
+} 
+
+
+@media (max-width: 900px) {
+
+	.Navbar ul {
+		margin-top: 5rem;
+	}
+
+	.Navbar li {
+	  margin-top: 10rem;
+	}
+
 }

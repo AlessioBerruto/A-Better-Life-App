@@ -26,7 +26,7 @@ function Navbar() {
 							alt="timer-icon"
 							className="navbar-icon"
 						/>
-						Timer per meditare
+						Timer
 					</Link>
 				</li>
 				<li>
@@ -36,7 +36,7 @@ function Navbar() {
 							alt="video-icon"
 							className="navbar-icon"
 						/>
-						Meditazione Guidata
+						Meditazione guidata
 					</Link>
 				</li>
 			</ul>

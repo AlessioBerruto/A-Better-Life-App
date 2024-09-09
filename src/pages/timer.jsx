@@ -8,6 +8,7 @@ import {
 	resetTimer,
 } from "../redux/timerSlice";
 import Navbar from "../components/Navbar";
+import PlantImg from "../assets/plant.jpg";
 
 const Timer = () => {
 	const [inputValue, setInputValue] = useState("");
@@ -41,6 +42,7 @@ const Timer = () => {
 			e.preventDefault();
 		}
 	};
+	
 
 	const handleReset = () => {
 		setInputValue("");
@@ -49,35 +51,60 @@ const Timer = () => {
 
 	return (
 		<>
-            <Navbar />
-			<div className="content">
-				<h1>Timer di Meditazione</h1>
-				<input
-					type="number"
-					placeholder="Imposta il tempo (minuti)"
-					value={inputValue}
-					onChange={handleSetTime}
-					onKeyDown={preventNegativeInput}
-					onInput={(e) =>
-						(e.target.value = e.target.value.replace(/[^0-9]/g, ""))
-					}
-					disabled={isActive}
-					min="0"
-				/>
-				<div>
-					<button
-						onClick={() => dispatch(startTimer())}
-						disabled={isActive || time === 0}
-					>
-						Avvia
-					</button>
-					<button onClick={() => dispatch(stopTimer())} disabled={!isActive}>
-						Ferma
-					</button>
-					<button onClick={handleReset}>Reset</button>
+			<Navbar />
+			<div className="timer-page">
+				<div className="timer-img-container">
+					<img className="timer-img" src={PlantImg} alt="plant-image" />
 				</div>
-				<div>
-					<h2>{`${Math.floor(time / 60)}:${("0" + (time % 60)).slice(-2)}`}</h2>
+
+				<div className="timer-container">
+					<p>
+						Utilizza il timer per impostare il tempo di meditazione che
+						preferisci, <br /> poi concentrati sul tuo respiro e sui tuoi
+						pensieri.
+					</p>
+					<input
+						className="input-field"
+						type="number"
+						placeholder="Imposta il tempo (minuti)"
+						value={inputValue}
+						onChange={handleSetTime}
+						onKeyDown={preventNegativeInput}
+						onInput={(e) => {
+							let value = e.target.value.replace(/[^0-9]/g, ""); 
+							if (value.length > 3) { 
+								value = value.slice(0, 3); 
+							}
+							e.target.value = value;
+							setInputValue(value);
+						}}
+						disabled={isActive}
+						min="0"
+					/>
+					<div className="timer-btn-container">
+						<button
+							className="timer-btn"
+							onClick={() => dispatch(startTimer())}
+							disabled={isActive || time === 0}
+						>
+							Start
+						</button>
+						<button
+							className="timer-btn"
+							onClick={() => dispatch(stopTimer())}
+							disabled={!isActive}
+						>
+							Pausa
+						</button>
+						<button className="timer-btn" onClick={handleReset}>
+							Reset
+						</button>
+					</div>
+					<div>
+						<h2>{`${Math.floor(time / 60)}:${("0" + (time % 60)).slice(
+							-2
+						)}`}</h2>
+					</div>
 				</div>
 			</div>
 		</>

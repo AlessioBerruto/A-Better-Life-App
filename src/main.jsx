@@ -22,7 +22,9 @@ const router = createBrowserRouter ([
     path: "/video",
     element: <Video></Video>,
   }
-])
+], {
+  basename: "/A-Better-Life-App" 
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

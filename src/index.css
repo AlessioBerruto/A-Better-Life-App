@@ -39,3 +39,29 @@ body {
 	height: 100%;
 	width: auto;
 }
+
+/* MEDIA QUERIES */
+@media (min-width: 769px) and (max-width: 912px) {
+	body {
+		max-width: 912px;
+		width: 100%;		
+	}
+}
+@media (min-width: 601px) and (max-width: 768px) {
+	body {
+		max-width: 768px;
+		width: 100%;		
+	}
+}
+@media (min-width: 414px) and (max-width: 600px) {
+	body {
+		max-width: 600px;
+		width: 100%;		
+	}
+}
+@media (max-width: 413px) {
+	body {
+		max-width: 413px;
+		width: 100%;		
+	}
+}

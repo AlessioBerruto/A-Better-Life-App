@@ -336,6 +336,10 @@ iframe {
     font-size: 3rem;
   }  
 
+  .timer-container {
+    padding-top: 0;
+  }
+
   .input-field {
     width: 175px;    
     height: 30px;
@@ -398,6 +402,10 @@ iframe {
   .timer-container h2 {
     font-size: 3rem;
   }  
+
+  .timer-container {
+    padding-top: 0;
+  }
 
   .input-field {
     width: 175px;

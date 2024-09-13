@@ -10,7 +10,7 @@ const App = () => {
 			<Navbar />
 			<div className="home-page">
 				<div className="home-content">
-					<h1>A BETTER LIFE</h1>
+					<h1 className="title">A BETTER LIFE</h1>
 					<p>
 						"La meditazione è una pratica che consiste nel focalizzare
 						l'attenzione e portare la mente a uno stato di calma e

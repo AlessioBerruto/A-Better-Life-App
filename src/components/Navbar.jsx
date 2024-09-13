@@ -42,7 +42,7 @@ function Navbar() {
 			</ul>
 			<div className="brand-container">
 				<img src={abIcon} alt="AB-icon" />
-				<p>AB Development</p>
+				<p>AB Dev.</p>
 			</div>
 		</div>
 	);

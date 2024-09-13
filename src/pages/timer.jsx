@@ -60,7 +60,7 @@ const Timer = () => {
 				<div className="timer-container">
 					<p>
 						Utilizza il timer per impostare il tempo di meditazione che
-						preferisci, <br /> poi concentrati sul tuo respiro e sui tuoi
+						preferisci, poi concentrati sul tuo respiro e sui tuoi
 						pensieri.
 					</p>
 					<input
